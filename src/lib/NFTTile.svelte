@@ -2,9 +2,9 @@
 	import { GetIpfsUrlFromPinata } from '$lib/utils';
 	export let data: any;
 
-	const newTo = { pathname: '/nftPage' + data.data.tokenId };
+	const newTo = { pathname: '/nftPage' + '646822' };
 
-	const IPFSUrl = GetIpfsUrlFromPinata(data.data.image);
+	const IPFSUrl = GetIpfsUrlFromPinata(data.image);
 </script>
 
 <a href={newTo.pathname}>
@@ -13,8 +13,8 @@
 	>
 		<img src={IPFSUrl} alt="" class="w-72 h-48 rounded-lg object-cover" />
 		<div class="w-full p-2 bg-gradient-to-t from-[#454545] to-transparent rounded-lg pt-5 -mt-20">
-			<strong class="text-xl">{data.data.name}</strong>
-			<p>{data.data.description}</p>
+			<strong class="text-xl">{data.name}</strong>
+			<p>{data.description}</p>
 		</div>
 	</div></a
 >
